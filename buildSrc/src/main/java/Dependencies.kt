@@ -26,7 +26,7 @@ object Dependencies {
         const val material = "com.google.android.material:material:1.4.0"
         const val prefs = "androidx.preference:preference-ktx:1.1.1"
         const val crypto = "androidx.security:security-crypto:1.1.0-alpha03"
-        const val splashScreen = "androidx.core:core-splashscreen:1.0.0-alpha01"
+        const val splashScreen = "androidx.core:core-splashscreen:1.0.1"
     }
 
     object DataStore {
@@ -59,7 +59,7 @@ object Dependencies {
     }
 
     object Koin {
-        const val version = "3.1.2"
+        const val version = "3.5.4"
         const val koinAndroid = "io.insert-koin:koin-android:$version"
         const val compose = "io.insert-koin:koin-androidx-compose:$version"
         const val test = "io.insert-koin:koin-test:$version"
@@ -83,7 +83,7 @@ object Dependencies {
     }
 
     object Hilt {
-        const val version = "2.38.1"
+        const val version = "2.40"
         const val plugin = "com.google.dagger:hilt-android-gradle-plugin:$version"
         const val dependency = "com.google.dagger:hilt-android:$version"
         const val compiler = "com.google.dagger:hilt-android-compiler:$version"
