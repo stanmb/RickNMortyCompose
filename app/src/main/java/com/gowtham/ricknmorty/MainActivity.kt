@@ -16,9 +16,6 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.gowtham.ricknmorty.compose.characters.CharactersScreen
-import com.gowtham.ricknmorty.compose.episodes.EpisodesScreen
-import com.gowtham.ricknmorty.compose.locations.LocationsScreen
 import com.gowtham.ricknmorty.compose.theme.TAppTheme
 import com.gowtham.ricknmorty.navigation.AppNavigation
 import com.gowtham.ricknmorty.navigation.Screens
@@ -60,11 +57,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun RickNMortyApp(
-    splashScreenVisibleCondition: (SplashScreen.KeepOnScreenCondition) -> Unit,
+    splashScreenVisibleCondition: ((SplashScreen.KeepOnScreenCondition) -> Unit)?,
     viewModel: MainViewModel
 ) {
-    splashScreenVisibleCondition {
-        viewModel.splash.value
+    if (splashScreenVisibleCondition != null) {
+        splashScreenVisibleCondition {
+            viewModel.splash.value
+        }
     }
     val navController = rememberNavController()
     val bottomNavigationItems =

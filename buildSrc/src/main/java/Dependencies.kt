@@ -93,6 +93,6 @@ object Dependencies {
         const val junit = "junit:junit:4.13.2"
         const val junitAndroid = "androidx.test.ext:junit:1.1.2"
         const val espresso = "androidx.test.espresso:espresso-core:3.4.0"
-        const val junitCompose = "androidx.compose.ui:ui-test-junit4:1.0.0-alpha07"
+        const val junitCompose = "androidx.compose.ui:ui-test-junit4:1.0.0"
     }
 }
