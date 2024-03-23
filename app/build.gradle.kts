@@ -104,8 +104,6 @@ dependencies {
     androidTestImplementation(Dependencies.Testing.junitAndroid)
     androidTestImplementation(Dependencies.Testing.espresso)
     androidTestImplementation(Dependencies.Testing.junitCompose)
-//    androidTestImplementation("com.google.dagger:hilt-android-testing:2.51")
-//    kaptAndroidTest("com.google.dagger:hilt-compiler:2.51")
 }
 
 apollo {

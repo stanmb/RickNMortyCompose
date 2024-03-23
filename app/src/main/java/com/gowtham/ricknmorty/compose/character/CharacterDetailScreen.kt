@@ -38,6 +38,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.LocalImageLoader
@@ -46,6 +49,7 @@ import com.gowtham.ricknmorty.compose.common.CharacterTitle
 import com.gowtham.ricknmorty.compose.common.FailedComposable
 import com.gowtham.ricknmorty.compose.common.InfoRow
 import com.gowtham.ricknmorty.utils.Resource
+import com.gowtham.ricknmorty.utils.TestTag
 import fragment.CharacterDetail
 import kotlinx.coroutines.launch
 
@@ -115,7 +119,12 @@ fun DetailData(character: CharacterDetail?) {
     )
 
     Surface {
-        LazyColumn {
+        LazyColumn(
+            modifier = Modifier
+                .testTag(TestTag.CHARACTER_DETAILED_SCREEN_LAZY_COLUMN)
+                .semantics { contentDescription = (character?.episode?.size?.plus(listInfoTitle.size)
+                    ?.plus(4)).toString() }
+        ) {
             character?.let {
                 item {
                     CharacterTitle("MUGSHOT")
@@ -141,7 +150,7 @@ fun DetailData(character: CharacterDetail?) {
                 items(character.episode.size) { index ->
                     val episode = it.episode[index]
                     episode?.let {
-                        EpisodeRow(episode)
+                        EpisodeRow(episode, index)
                         if (index < character.episode.lastIndex)
                             Divider(modifier = Modifier.padding(horizontal = 12.dp))
                     }
@@ -176,6 +185,7 @@ fun CharacterImage(character: CharacterDetail) {
                         }
                     ),
                     contentDescription = character.name,
+                    modifier = Modifier.testTag("Image: ${character.name.toString()}")
                 )
             }
         }
@@ -183,11 +193,12 @@ fun CharacterImage(character: CharacterDetail) {
 }
 
 @Composable
-fun EpisodeRow(episode: CharacterDetail.Episode) {
+fun EpisodeRow(episode: CharacterDetail.Episode, index: Int) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(12.dp),
+            .padding(12.dp)
+            .testTag(TestTag.EPISODE + " $index"),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
