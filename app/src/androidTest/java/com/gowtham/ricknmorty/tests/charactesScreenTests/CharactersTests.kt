@@ -5,19 +5,31 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.gowtham.ricknmorty.screens.CharacterDetailedScreen
 import com.gowtham.ricknmorty.screens.CharactersScreen
 import com.gowtham.ricknmorty.tests.BaseUiTest
+import io.qameta.allure.android.runners.AllureAndroidJUnit4
+import io.qameta.allure.kotlin.Allure.step
 import org.junit.Test
 import org.junit.runner.RunWith
 
-@RunWith(AndroidJUnit4::class)
+@RunWith(AllureAndroidJUnit4::class)
 @OptIn(ExperimentalMaterialApi::class)
 class MyComposeTest : BaseUiTest() {
     @Test
     fun testCharacterCard() {
         val charactersScreen = CharactersScreen(composeTestRule)
-        charactersScreen
-            .assertAvatarPresent()
-            .assertNamePresent()
-            .assertEpisodesPresent()
+        step("Assert that an avatar of a character is present") {
+            charactersScreen
+                .assertAvatarPresent()
+        }
+
+        step("Assert that a name of a character is present") {
+            charactersScreen
+                .assertNamePresent()
+        }
+
+        step("Assert that an episode text of a character is present") {
+            charactersScreen
+                .assertEpisodesPresent()
+        }
     }
 
     @Test

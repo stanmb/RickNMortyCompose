@@ -4,6 +4,7 @@ plugins {
     id(Plugins.kotlinKapt)
     id(Plugins.Apollo.plugin).version(Plugins.Apollo.version)
     id(Plugins.hilt)
+    id("io.qameta.allure") version "2.11.2"
 }
 
 android {
@@ -104,6 +105,11 @@ dependencies {
     androidTestImplementation(Dependencies.Testing.junitAndroid)
     androidTestImplementation(Dependencies.Testing.espresso)
     androidTestImplementation(Dependencies.Testing.junitCompose)
+    androidTestImplementation("io.qameta.allure:allure-kotlin-model:2.4.0")
+    androidTestImplementation("io.qameta.allure:allure-kotlin-commons:2.4.0")
+    androidTestImplementation("io.qameta.allure:allure-kotlin-junit4:2.4.0")
+    androidTestImplementation("io.qameta.allure:allure-kotlin-android:2.4.0")
+    androidTestUtil("androidx.test:orchestrator:1.4.2")
 }
 
 apollo {
