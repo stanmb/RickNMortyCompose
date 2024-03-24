@@ -1,3 +1,5 @@
+import java.io.FileOutputStream
+
 plugins {
     id(Plugins.androidApplication)
     id(Plugins.kotlinAndroid)
@@ -117,3 +119,7 @@ apollo {
     generateKotlinModels.set(true)
 }
 
+val copyAllureResults by tasks.registering(Exec::class) {
+        commandLine("adb", "root")
+        commandLine("adb", "pull", "/data/data/com.gowtham.ricknmorty/files/allure-results", "build")
+}

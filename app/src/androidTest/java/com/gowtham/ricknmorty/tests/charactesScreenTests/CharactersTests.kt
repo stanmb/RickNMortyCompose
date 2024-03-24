@@ -12,7 +12,8 @@ import org.junit.runner.RunWith
 
 @RunWith(AllureAndroidJUnit4::class)
 @OptIn(ExperimentalMaterialApi::class)
-class MyComposeTest : BaseUiTest() {
+class CharactersTests : BaseUiTest() {
+
     @Test
     fun testCharacterCard() {
         val charactersScreen = CharactersScreen(composeTestRule)
