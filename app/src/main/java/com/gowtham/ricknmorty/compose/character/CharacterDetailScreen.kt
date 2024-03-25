@@ -185,7 +185,7 @@ fun CharacterImage(character: CharacterDetail) {
                         }
                     ),
                     contentDescription = character.name,
-                    modifier = Modifier.testTag("Image: ${character.name.toString()}")
+                    modifier = Modifier.testTag(TestTag.CHARACTER_AVATAR_DETAILED_SCREEN)
                 )
             }
         }

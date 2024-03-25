@@ -37,18 +37,39 @@ class CharactersTests : BaseUiTest() {
     fun testAllEpisodesOfCharacterShownInDetailedCard() {
         val charactersScreen = CharactersScreen(composeTestRule)
         val characterDetailedScreen = CharacterDetailedScreen(composeTestRule)
-        val episodes = charactersScreen.getNumberOfEpisodes()
-        charactersScreen.tapOnRickRow()
-        characterDetailedScreen.checkNumberOfShownEpisodes(episodes)
+        val numberOfEpisodes = charactersScreen.getNumberOfEpisodes()
+        step("Tap on the Rick Sanchez row") {
+            charactersScreen.tapOnRickRow()
+        }
+        step("Check that all of Rick's episodes are present on detailed screen") {
+            characterDetailedScreen.checkNumberOfShownEpisodes(numberOfEpisodes)
+        }
+    }
 
-//        composeTestRule.waitUntilExists(hasTestTag("episodes"))
+    @Test
+    fun testAllInfoTagsPresentOnDetailedScreen() {
+        val charactersScreen = CharactersScreen(composeTestRule)
+        val characterDetailedScreen = CharacterDetailedScreen(composeTestRule)
+        val listInfoTitle = listOf("Species", "Gender", "Status", "Location", "Origin")
+        step("Tap on the Rick Sanchez row") {
+            charactersScreen.tapOnRickRow()
+        }
+        step("Check if all of the tags are present of detailed screen." +
+                " List of tags - Species, Gender, Status, Location, Origin") {
+            characterDetailedScreen.assertAllTagsPresent(listInfoTitle)
+        }
+    }
 
-
-//        composeTestRule.onNodeWithTag("Rick Sanchez").performClick()
-//        val listInfoTitle = listOf("Species", "Gender", "Status", "Location", "Origin")
-//        composeTestRule.waitUntilExists(hasTestTag(listInfoTitle.first()))
-//        listInfoTitle.forEach {
-//            composeTestRule.onNodeWithTag(it).assertExists()
+    @Test
+    fun testAvatarPresentsOnDetailedScreen() {
+        val charactersScreen = CharactersScreen(composeTestRule)
+        val characterDetailedScreen = CharacterDetailedScreen(composeTestRule)
+        step("Tap on the Rick Sanchez row") {
+            charactersScreen.tapOnRickRow()
+        }
+        step("Check that avatar presents on the detailed screen") {
+            characterDetailedScreen.assertAvatarPresent()
+        }
     }
 }
 
