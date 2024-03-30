@@ -1,4 +1,4 @@
-package com.gowtham.ricknmorty.screens
+package com.gowtham.ricknmorty.screens.characterTab
 
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.test.ExperimentalTestApi
@@ -7,9 +7,10 @@ import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.ComposeContentTestRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performScrollToIndex
+import com.gowtham.ricknmorty.screens.BaseScreen
 import com.gowtham.ricknmorty.utils.TestTag
 
-class CharacterDetailedScreen(private val composeTestRule: ComposeContentTestRule): BaseScreen() {
+class CharacterDetailedScreen(private val composeTestRule: ComposeContentTestRule): BaseScreen(composeTestRule) {
     @OptIn(ExperimentalTestApi::class)
     fun checkNumberOfShownEpisodes(expectEpisodes: Int) {
         val lastEpisodeTestTag = "episode ${expectEpisodes - 1}"
@@ -18,5 +19,10 @@ class CharacterDetailedScreen(private val composeTestRule: ComposeContentTestRul
         composeTestRule.onNodeWithTag(TestTag.CHARACTER_DETAILED_SCREEN_LAZY_COLUMN).performScrollToIndex(rowsInLazyColumn - 1)
         composeTestRule.waitUntilExists(hasTestTag(lastEpisodeTestTag))
         composeTestRule.onNodeWithTag(lastEpisodeTestTag, useUnmergedTree = true).assertIsDisplayed()
+    }
+
+    fun assertAvatarPresent() {
+        composeTestRule.waitUntilExists(hasTestTag(TestTag.CHARACTER_AVATAR_DETAILED_SCREEN))
+        composeTestRule.onNodeWithTag(TestTag.CHARACTER_AVATAR_DETAILED_SCREEN).assertIsDisplayed()
     }
 }

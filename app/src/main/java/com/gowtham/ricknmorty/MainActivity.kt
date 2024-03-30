@@ -10,6 +10,8 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -79,6 +81,7 @@ fun MortyBottomNavigation(navController: NavHostController, items: List<Screens>
         val currentRoute = currentRoute(navController = navController)
         items.forEach { screen ->
             BottomNavigationItem(
+                modifier = Modifier.testTag(screen.label),
                 selected = currentRoute == screen.route,
                 onClick = {
                     if (currentRoute != screen.route) {

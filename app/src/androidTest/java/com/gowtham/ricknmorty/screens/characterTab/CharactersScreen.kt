@@ -1,4 +1,4 @@
-package com.gowtham.ricknmorty.screens
+package com.gowtham.ricknmorty.screens.characterTab
 
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.test.assertIsDisplayed
@@ -6,18 +6,18 @@ import androidx.compose.ui.test.hasAnyAncestor
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.ComposeContentTestRule
 import androidx.compose.ui.test.onNodeWithTag
-import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.text.AnnotatedString
+import com.gowtham.ricknmorty.screens.BaseScreen
 import com.gowtham.ricknmorty.utils.TestTag
 
-class CharactersScreen(private val composeTestRule: ComposeContentTestRule): BaseScreen() {
+class CharactersScreen(private val composeTestRule: ComposeContentTestRule): BaseScreen(composeTestRule) {
     private val episodesText = composeTestRule
         .onNode(hasTestTag(TestTag.EPISODES)
             .and(hasAnyAncestor(hasTestTag(TestTag.RICK_SANCHEZ)))
             ,useUnmergedTree = true
         )
-    private val rickRow = composeTestRule.onNodeWithText(TestTag.RICK_SANCHEZ)
+    private val rickRow = composeTestRule.onNodeWithTag(TestTag.RICK_SANCHEZ)
     private val characterAvatar = composeTestRule
         .onNode(hasTestTag(TestTag.CHARACTER_AVATAR)
             .and(hasAnyAncestor(hasTestTag(TestTag.RICK_SANCHEZ)))

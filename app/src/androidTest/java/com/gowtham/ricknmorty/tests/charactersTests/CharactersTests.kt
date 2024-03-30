@@ -1,9 +1,8 @@
-package com.gowtham.ricknmorty.tests.charactesScreenTests
+package com.gowtham.ricknmorty.tests.charactersTests
 
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.gowtham.ricknmorty.screens.CharacterDetailedScreen
-import com.gowtham.ricknmorty.screens.CharactersScreen
+import com.gowtham.ricknmorty.screens.characterTab.CharacterDetailedScreen
+import com.gowtham.ricknmorty.screens.characterTab.CharactersScreen
 import com.gowtham.ricknmorty.tests.BaseUiTest
 import io.qameta.allure.android.runners.AllureAndroidJUnit4
 import io.qameta.allure.kotlin.Allure.step
@@ -55,7 +54,7 @@ class CharactersTests : BaseUiTest() {
             charactersScreen.tapOnRickRow()
         }
         step("Check if all of the tags are present of detailed screen." +
-                " List of tags - Species, Gender, Status, Location, Origin") {
+                " List of tags - $listInfoTitle") {
             characterDetailedScreen.assertAllTagsPresent(listInfoTitle)
         }
     }
