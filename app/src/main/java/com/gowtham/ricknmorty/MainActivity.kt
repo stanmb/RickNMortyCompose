@@ -10,15 +10,14 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.gowtham.ricknmorty.compose.characters.CharactersScreen
-import com.gowtham.ricknmorty.compose.episodes.EpisodesScreen
-import com.gowtham.ricknmorty.compose.locations.LocationsScreen
 import com.gowtham.ricknmorty.compose.theme.TAppTheme
 import com.gowtham.ricknmorty.navigation.AppNavigation
 import com.gowtham.ricknmorty.navigation.Screens
@@ -45,7 +44,7 @@ class MainActivity : ComponentActivity() {
         splashScreen = installSplashScreen()
         setContent {
             AppContent {
-                splashScreen.setKeepVisibleCondition(it)
+                splashScreen.setKeepOnScreenCondition(it)
             }
         }
     }
@@ -60,11 +59,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun RickNMortyApp(
-    splashScreenVisibleCondition: (SplashScreen.KeepOnScreenCondition) -> Unit,
+    splashScreenVisibleCondition: ((SplashScreen.KeepOnScreenCondition) -> Unit)?,
     viewModel: MainViewModel
 ) {
-    splashScreenVisibleCondition {
-        viewModel.splash.value
+    if (splashScreenVisibleCondition != null) {
+        splashScreenVisibleCondition {
+            viewModel.splash.value
+        }
     }
     val navController = rememberNavController()
     val bottomNavigationItems =
@@ -80,6 +81,7 @@ fun MortyBottomNavigation(navController: NavHostController, items: List<Screens>
         val currentRoute = currentRoute(navController = navController)
         items.forEach { screen ->
             BottomNavigationItem(
+                modifier = Modifier.testTag(screen.label),
                 selected = currentRoute == screen.route,
                 onClick = {
                     if (currentRoute != screen.route) {

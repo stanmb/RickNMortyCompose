@@ -11,8 +11,8 @@ plugins {
 buildscript {
 
     repositories {
-        google()
         mavenCentral()
+        google()
     }
     dependencies {
         classpath(ClassPaths.gradlePlugin)

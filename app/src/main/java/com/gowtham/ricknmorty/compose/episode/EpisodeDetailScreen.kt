@@ -27,6 +27,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.gowtham.ricknmorty.compose.characters.CharacterAvatar
@@ -34,6 +35,7 @@ import com.gowtham.ricknmorty.compose.common.CharacterTitle
 import com.gowtham.ricknmorty.compose.common.FailedComposable
 import com.gowtham.ricknmorty.compose.common.InfoRow
 import com.gowtham.ricknmorty.utils.Resource
+import com.gowtham.ricknmorty.utils.TestTag
 import fragment.EpisodeDetail
 import kotlinx.coroutines.launch
 
@@ -136,7 +138,8 @@ fun CharacterRow(character: EpisodeDetail.Character) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(12.dp),
+            .padding(12.dp)
+            .testTag(TestTag.CHARACTER_IN_EPISODE),
         verticalAlignment = Alignment.CenterVertically
     ) {
         CharacterAvatar(
@@ -148,7 +151,8 @@ fun CharacterRow(character: EpisodeDetail.Character) {
             character.name.toString(),
             modifier = Modifier
                 .weight(1f)
-                .padding(start = 8.dp),
+                .padding(start = 8.dp)
+                .testTag(TestTag.CHARACTER_NAME_IN_EPISODE),
             style = MaterialTheme.typography.subtitle1,
         )
     }

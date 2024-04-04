@@ -1,0 +1,133 @@
+{
+    "name": "testElementsOfCharacterShown",
+    "start": 1711219681636,
+    "stop": 1711219685112,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Run the app",
+            "start": 1711219681668,
+            "stop": 1711219683805,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Navigate to episodes screen",
+            "start": 1711219683806,
+            "stop": 1711219683811,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Tap on the fist row of episodes list",
+            "start": 1711219683811,
+            "stop": 1711219684099,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Assert that the avatar of the first character is present",
+            "start": 1711219684099,
+            "stop": 1711219684253,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Assert that the name of the first character is present",
+            "start": 1711219684253,
+            "stop": 1711219684253,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "7af15810-8135-4abd-97e9-8027cdb069ea",
+    "historyId": "ed4368bc7232a8a33d50e96d5d16b91e",
+    "fullName": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests.testElementsOfCharacterShown",
+    "labels": [
+        {
+            "name": "package",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests"
+        },
+        {
+            "name": "testClass",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "testElementsOfCharacterShown"
+        },
+        {
+            "name": "suite",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(855)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

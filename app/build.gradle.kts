@@ -1,9 +1,12 @@
+import java.io.FileOutputStream
+
 plugins {
     id(Plugins.androidApplication)
     id(Plugins.kotlinAndroid)
     id(Plugins.kotlinKapt)
     id(Plugins.Apollo.plugin).version(Plugins.Apollo.version)
     id(Plugins.hilt)
+    id("io.qameta.allure") version "2.11.2"
 }
 
 android {
@@ -104,9 +107,18 @@ dependencies {
     androidTestImplementation(Dependencies.Testing.junitAndroid)
     androidTestImplementation(Dependencies.Testing.espresso)
     androidTestImplementation(Dependencies.Testing.junitCompose)
+    androidTestImplementation(Dependencies.Testing.Allure.allureKotlinModel)
+    androidTestImplementation(Dependencies.Testing.Allure.allureKotlinCommons)
+    androidTestImplementation(Dependencies.Testing.Allure.allureKotlinJunit4)
+    androidTestImplementation(Dependencies.Testing.Allure.allureKotlinAndroid)
 }
 
 apollo {
     // instruct the compiler to generate Kotlin models
     generateKotlinModels.set(true)
+}
+
+val copyAllureResults by tasks.registering(Exec::class) {
+        commandLine("adb", "root")
+        commandLine("adb", "pull", "/data/data/com.gowtham.ricknmorty/files/allure-results", "build")
 }

@@ -31,6 +31,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
@@ -42,6 +43,7 @@ import androidx.paging.compose.items
 import coil.compose.LocalImageLoader
 import coil.compose.rememberImagePainter
 import com.gowtham.ricknmorty.MainViewModel
+import com.gowtham.ricknmorty.utils.TestTag
 import fragment.CharacterDetail
 
 @Composable
@@ -141,7 +143,8 @@ fun CharactersListRowView(
                     onClickListener(character)
                 }
             )
-            .padding(12.dp),
+            .padding(12.dp)
+            .testTag(character.name.toString()),
         verticalAlignment = Alignment.CenterVertically
     ) {
 
@@ -150,12 +153,14 @@ fun CharactersListRowView(
         Column(modifier = Modifier.padding(horizontal = 8.dp)) {
             Text(
                 character.name ?: "Name unavailable",
-                style = MaterialTheme.typography.h6, maxLines = 1, overflow = TextOverflow.Ellipsis
+                style = MaterialTheme.typography.h6, maxLines = 1, overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.testTag(TestTag.CHARACTER_NAME)
             )
             CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
                 Text(
                     "${character.episode.size} episode(s)",
-                    style = MaterialTheme.typography.body2
+                    style = MaterialTheme.typography.body2,
+                    modifier = Modifier.testTag(TestTag.EPISODES)
                 )
             }
         }
@@ -180,7 +185,8 @@ fun CharacterAvatar(name: String, url: String?, size: Dp) {
                         placeholder(0)
                     }
                 ),
-                modifier = Modifier.size(size),
+                modifier = Modifier.size(size)
+                    .testTag(TestTag.CHARACTER_AVATAR),
                 contentDescription = name
             )
         }

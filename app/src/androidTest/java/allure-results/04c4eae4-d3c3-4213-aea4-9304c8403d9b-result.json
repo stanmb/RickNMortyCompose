@@ -1,0 +1,101 @@
+{
+    "name": "testAvatarPresentsOnDetailedScreen",
+    "start": 1711219655486,
+    "stop": 1711219659780,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Run the app",
+            "start": 1711219655796,
+            "stop": 1711219658207,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Tap on the Rick Sanchez row",
+            "start": 1711219658208,
+            "stop": 1711219658782,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Check that avatar presents on the detailed screen",
+            "start": 1711219658783,
+            "stop": 1711219659506,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "04c4eae4-d3c3-4213-aea4-9304c8403d9b",
+    "historyId": "1e594aa37a5b5ffbd865263c9e02123d",
+    "fullName": "com.gowtham.ricknmorty.tests.charactersTests.CharactersTests.testAvatarPresentsOnDetailedScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "com.gowtham.ricknmorty.tests.charactersTests"
+        },
+        {
+            "name": "testClass",
+            "value": "com.gowtham.ricknmorty.tests.charactersTests.CharactersTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "testAvatarPresentsOnDetailedScreen"
+        },
+        {
+            "name": "suite",
+            "value": "com.gowtham.ricknmorty.tests.charactersTests.CharactersTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(855)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

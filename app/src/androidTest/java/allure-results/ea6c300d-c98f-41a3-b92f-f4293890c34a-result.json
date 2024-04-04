@@ -1,0 +1,117 @@
+{
+    "name": "testAllInfoTagsPresentOnDetailedScreen",
+    "start": 1711219678000,
+    "stop": 1711219681632,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Run the app",
+            "start": 1711219678057,
+            "stop": 1711219680189,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Navigate to episodes screen",
+            "start": 1711219680190,
+            "stop": 1711219680194,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Tap on the fist row of episodes list",
+            "start": 1711219680194,
+            "stop": 1711219680545,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Check if all of the tags are present of detailed screen. List of tags - [Name, Air time, Code]",
+            "start": 1711219680545,
+            "stop": 1711219680738,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "ea6c300d-c98f-41a3-b92f-f4293890c34a",
+    "historyId": "20e1e307e55f7b8aa5c607ba555716a",
+    "fullName": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests.testAllInfoTagsPresentOnDetailedScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests"
+        },
+        {
+            "name": "testClass",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "testAllInfoTagsPresentOnDetailedScreen"
+        },
+        {
+            "name": "suite",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(855)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

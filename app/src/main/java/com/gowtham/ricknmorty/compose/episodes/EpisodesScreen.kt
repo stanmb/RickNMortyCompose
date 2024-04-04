@@ -24,6 +24,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
@@ -31,6 +32,7 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.items
 import com.gowtham.ricknmorty.MainViewModel
 import com.gowtham.ricknmorty.compose.characters.ErrorView
+import com.gowtham.ricknmorty.utils.TestTag
 import com.gowtham.ricknmorty.utils.formatToDate
 import fragment.EpisodeDetail
 
@@ -43,7 +45,7 @@ fun EpisodesScreen(
     val lazyEpisodeList = viewModel.episodes.collectAsLazyPagingItems()
 
     Scaffold(
-        topBar = { TopAppBar(title = { Text("Episodes") }) },
+        topBar = { TopAppBar(title = { Text( "Episodes", modifier = Modifier.testTag(TestTag.EPISODES_TAB_BAR_TEXT)) }) },
         bottomBar = bottomBar,
         modifier = Modifier.fillMaxSize()
     ) {
@@ -57,7 +59,7 @@ fun EpisodesScreen(
                 strokeWidth = 5.dp
             )
         }
-        LazyColumn(contentPadding = it) {
+        LazyColumn(contentPadding = it, modifier = Modifier.testTag("Lazy Column")) {
             items(lazyEpisodeList) { episode ->
                 episode?.let {
                     EpisodeRow(episode, onItemClickListener)
@@ -103,7 +105,8 @@ fun EpisodeRow(episode: EpisodeDetail, onItemClickListener: (character: EpisodeD
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable { onItemClickListener(episode) }
-                .padding(12.dp),
+                .padding(12.dp)
+                .testTag(TestTag.EPISODE_ROW),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(
@@ -116,18 +119,21 @@ fun EpisodeRow(episode: EpisodeDetail, onItemClickListener: (character: EpisodeD
                 Text(
                     text = episode.name ?: "Episode name unavailable",
                     style = MaterialTheme.typography.h6,
-                    maxLines = 1, overflow = TextOverflow.Ellipsis
+                    maxLines = 1, overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.testTag(TestTag.EPISODE_NAME)
                 )
                 CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
                     Text(
                         text = episode.episode ?: "Code unavailable",
-                        style = MaterialTheme.typography.body2
+                        style = MaterialTheme.typography.body2,
+                        modifier = Modifier.testTag(TestTag.EPISODE_CODE)
                     )
                 }
             }
             Text(
                 text = episode.air_date?.formatToDate() ?: "No airtime",
-                style = MaterialTheme.typography.subtitle1
+                style = MaterialTheme.typography.subtitle1,
+                modifier = Modifier.testTag(TestTag.EPISODE_DATE)
             )
         }
         Divider(modifier = Modifier.padding(horizontal = 6.dp))
