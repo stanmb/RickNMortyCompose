@@ -107,11 +107,10 @@ dependencies {
     androidTestImplementation(Dependencies.Testing.junitAndroid)
     androidTestImplementation(Dependencies.Testing.espresso)
     androidTestImplementation(Dependencies.Testing.junitCompose)
-    androidTestImplementation("io.qameta.allure:allure-kotlin-model:2.4.0")
-    androidTestImplementation("io.qameta.allure:allure-kotlin-commons:2.4.0")
-    androidTestImplementation("io.qameta.allure:allure-kotlin-junit4:2.4.0")
-    androidTestImplementation("io.qameta.allure:allure-kotlin-android:2.4.0")
-    androidTestUtil("androidx.test:orchestrator:1.4.2")
+    androidTestImplementation(Dependencies.Testing.Allure.allureKotlinModel)
+    androidTestImplementation(Dependencies.Testing.Allure.allureKotlinCommons)
+    androidTestImplementation(Dependencies.Testing.Allure.allureKotlinJunit4)
+    androidTestImplementation(Dependencies.Testing.Allure.allureKotlinAndroid)
 }
 
 apollo {

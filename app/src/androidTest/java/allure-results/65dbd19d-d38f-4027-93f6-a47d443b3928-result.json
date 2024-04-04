@@ -1,0 +1,117 @@
+{
+    "name": "testListOfCharactersInNotEmpty",
+    "start": 1711219674558,
+    "stop": 1711219677986,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Run the app",
+            "start": 1711219674619,
+            "stop": 1711219676759,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Navigate to episodes screen",
+            "start": 1711219676760,
+            "stop": 1711219676764,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Tap on the fist row of episodes list",
+            "start": 1711219676764,
+            "stop": 1711219677059,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Assert that list of characters is not empty",
+            "start": 1711219677059,
+            "stop": 1711219677672,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "65dbd19d-d38f-4027-93f6-a47d443b3928",
+    "historyId": "774d04c22302e841d7ee01871051a1ce",
+    "fullName": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests.testListOfCharactersInNotEmpty",
+    "labels": [
+        {
+            "name": "package",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests"
+        },
+        {
+            "name": "testClass",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "testListOfCharactersInNotEmpty"
+        },
+        {
+            "name": "suite",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(855)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

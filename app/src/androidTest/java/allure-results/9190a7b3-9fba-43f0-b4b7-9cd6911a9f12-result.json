@@ -1,0 +1,117 @@
+{
+    "name": "testCharacterCard",
+    "start": 1711219663462,
+    "stop": 1711219667008,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Run the app",
+            "start": 1711219663520,
+            "stop": 1711219665673,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Assert that an avatar of a character is present",
+            "start": 1711219665673,
+            "stop": 1711219665988,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Assert that a name of a character is present",
+            "start": 1711219665988,
+            "stop": 1711219665989,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Assert that an episode text of a character is present",
+            "start": 1711219665990,
+            "stop": 1711219665991,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "9190a7b3-9fba-43f0-b4b7-9cd6911a9f12",
+    "historyId": "4e4b94e463dfa0aa5c09140019e0b6f",
+    "fullName": "com.gowtham.ricknmorty.tests.charactersTests.CharactersTests.testCharacterCard",
+    "labels": [
+        {
+            "name": "package",
+            "value": "com.gowtham.ricknmorty.tests.charactersTests"
+        },
+        {
+            "name": "testClass",
+            "value": "com.gowtham.ricknmorty.tests.charactersTests.CharactersTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "testCharacterCard"
+        },
+        {
+            "name": "suite",
+            "value": "com.gowtham.ricknmorty.tests.charactersTests.CharactersTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(855)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

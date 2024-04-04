@@ -1,0 +1,101 @@
+{
+    "name": "testAllInfoTagsPresentOnDetailedScreen",
+    "start": 1711219667013,
+    "stop": 1711219670841,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Run the app",
+            "start": 1711219667066,
+            "stop": 1711219669232,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Tap on the Rick Sanchez row",
+            "start": 1711219669232,
+            "stop": 1711219669854,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Check if all of the tags are present of detailed screen. List of tags - [Species, Gender, Status, Location, Origin]",
+            "start": 1711219669854,
+            "stop": 1711219670020,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "11375cdf-b830-40ea-a797-a3ead8d51e91",
+    "historyId": "25ee3328c032ead92e20a70d3429302f",
+    "fullName": "com.gowtham.ricknmorty.tests.charactersTests.CharactersTests.testAllInfoTagsPresentOnDetailedScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "com.gowtham.ricknmorty.tests.charactersTests"
+        },
+        {
+            "name": "testClass",
+            "value": "com.gowtham.ricknmorty.tests.charactersTests.CharactersTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "testAllInfoTagsPresentOnDetailedScreen"
+        },
+        {
+            "name": "suite",
+            "value": "com.gowtham.ricknmorty.tests.charactersTests.CharactersTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(855)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

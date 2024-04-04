@@ -94,5 +94,12 @@ object Dependencies {
         const val junitAndroid = "androidx.test.ext:junit:1.1.2"
         const val espresso = "androidx.test.espresso:espresso-core:3.4.0"
         const val junitCompose = "androidx.compose.ui:ui-test-junit4:1.0.0"
+        object Allure {
+            private const val version = "2.4.0"
+            const val allureKotlinModel = "io.qameta.allure:allure-kotlin-model:$version"
+            const val allureKotlinCommons = "io.qameta.allure:allure-kotlin-commons:$version"
+            const val allureKotlinJunit4 = "io.qameta.allure:allure-kotlin-junit4:$version"
+            const val allureKotlinAndroid = "io.qameta.allure:allure-kotlin-android:$version"
+        }
     }
 }

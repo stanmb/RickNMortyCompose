@@ -1,0 +1,133 @@
+{
+    "name": "testAllElementsOfEpisodeDisplayed",
+    "start": 1711219670845,
+    "stop": 1711219674552,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Run the app",
+            "start": 1711219670874,
+            "stop": 1711219673104,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Navigate to episodes screen",
+            "start": 1711219673105,
+            "stop": 1711219673110,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Assert the name of the episode is displayed",
+            "start": 1711219673110,
+            "stop": 1711219673503,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Assert the code of the episode is displayed",
+            "start": 1711219673503,
+            "stop": 1711219673505,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Assert the date of the episode is displayed",
+            "start": 1711219673505,
+            "stop": 1711219673506,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "0d0b83e8-2be6-4733-828d-adf34d77dbe8",
+    "historyId": "9bf2d7488f18bf61c9a239cec0247f03",
+    "fullName": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests.testAllElementsOfEpisodeDisplayed",
+    "labels": [
+        {
+            "name": "package",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests"
+        },
+        {
+            "name": "testClass",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "testAllElementsOfEpisodeDisplayed"
+        },
+        {
+            "name": "suite",
+            "value": "com.gowtham.ricknmorty.tests.episodesTests.EpisodesTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(855)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}
